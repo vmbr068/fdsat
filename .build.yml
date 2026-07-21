@@ -1,0 +1,14 @@
+image: alpine/latest
+secrets:
+  - 8a4e3d33-8471-4128-bed7-aee621b026cb
+sources:
+  - https://git.sr.ht/~vmbr0/fdsat
+tasks:
+  - mirror: |
+      cd tonrepo
+      git remote add github git@github.com:vmbr068/fdsat.git || true
+      git push --mirror github
+triggers:
+  - action: email
+    condition: failure
+    to: vmbr0@tutamail.com
