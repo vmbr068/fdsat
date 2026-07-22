@@ -2,7 +2,7 @@ image: alpine/latest
 secrets:
   - 8a4e3d33-8471-4128-bed7-aee621b026cb
 sources:
-  - git@git.sr.ht:~vmbr0/fdsat
+  - https://git.sr.ht/~vmbr0/fdsat
 tasks:
   - github: |
      cat >>~/.ssh/known_hosts <<EOF
